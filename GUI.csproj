@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A6EAFFB-EFA1-4092-8FB7-3D97BA4A652C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinformWithEntity</RootNamespace>
+    <AssemblyName>WinformWithEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Product.Designer.cs">
+      <DependentUpon>GUI_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI_Product.resx">
+      <DependentUpon>GUI_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BUS\BUS.csproj">
+      <Project>{d675495f-34c1-47a1-ae22-914e0a11111b}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="DAO\DTO.csproj">
+      <Project>{35a00256-9d54-4065-b5cd-bd9baab3547e}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\add.png" />
+    <Content Include="Resource\analytics.png" />
+    <Content Include="Resource\arrow.png" />
+    <Content Include="Resource\bill.png" />
+    <Content Include="Resource\blogger.png" />
+    <Content Include="Resource\chair.png" />
+    <Content Include="Resource\check.png" />
+    <Content Include="Resource\coffee.jpg" />
+    <Content Include="Resource\coffee1.jpg" />
+    <Content Include="Resource\create-bill.png" />
+    <Content Include="Resource\cup-of-coffee.png" />
+    <Content Include="Resource\customer.png" />
+    <Content Include="Resource\delete.png" />
+    <Content Include="Resource\delivery-package-person.png" />
+    <Content Include="Resource\edit.png" />
+    <Content Include="Resource\excel.png" />
+    <Content Include="Resource\hide-pw.png" />
+    <Content Include="Resource\information.png" />
+    <Content Include="Resource\Login-Background.jpg" />
+    <Content Include="Resource\login2.png" />
+    <Content Include="Resource\logo-icon.ico" />
+    <Content Include="Resource\logout.png" />
+    <Content Include="Resource\menu.png" />
+    <Content Include="Resource\order.png" />
+    <Content Include="Resource\pay-bill.ico" />
+    <Content Include="Resource\print.png" />
+    <Content Include="Resource\profit.png" />
+    <Content Include="Resource\pw.png" />
+    <Content Include="Resource\refresh.png" />
+    <Content Include="Resource\revenue.png" />
+    <Content Include="Resource\salary.png" />
+    <Content Include="Resource\search.png" />
+    <Content Include="Resource\shop.png" />
+    <Content Include="Resource\show-pw.png" />
+    <Content Include="Resource\skills.png" />
+    <Content Include="Resource\staff.png" />
+    <Content Include="Resource\swap.png" />
+    <Content Include="Resource\system.png" />
+    <Content Include="Resource\table.png" />
+    <Content Include="Resource\tableEmpty.png" />
+    <Content Include="Resource\task.png" />
+    <Content Include="Resource\un.png" />
+    <Content Include="Resource\word.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
